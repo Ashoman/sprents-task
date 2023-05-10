@@ -28,16 +28,7 @@ def bracketCheck(expr):
 	# Check Empty Stack
 	if stack:
 		return "no"
-	return "yse"
+	return "yes"
 
 print(bracketCheck("{[()]}"))
 print(bracketCheck("{[(]}"))
-# Driver Code
-#if __name__ == "__main__":
-#	expr = input("Enter expression")
-
-	# Function call
-	#if bracketCheck(expr):
-	#	print("Balanced")
-	#else:
-		#print("Not Balanced")
