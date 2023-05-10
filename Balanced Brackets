@@ -1,0 +1,43 @@
+def bracketCheck(expr):
+	stack = [] #character stack 
+
+	# Traversing the Expression
+	for char in expr:
+		if char in ["(", "{", "["]: #if the char is opening brackets "(,{,["
+
+			# Push the element in the stack
+			stack.append(char)
+		else:
+
+			# IF current character is not opening
+			# bracket, then it must be closing.
+			# So stack cannot be empty at this point.
+			if not stack:
+				return False
+			current_char = stack.pop()
+			if current_char == '(':
+				if char != ")":
+					return  "no"
+			if current_char == '{':
+				if char != "}":
+					return  "no"
+			if current_char == '[':
+				if char != "]":
+					return  "no"
+
+	# Check Empty Stack
+	if stack:
+		return "no"
+	return "yse"
+
+print(bracketCheck("{[()]}"))
+print(bracketCheck("{[(]}"))
+# Driver Code
+#if __name__ == "__main__":
+#	expr = input("Enter expression")
+
+	# Function call
+	#if bracketCheck(expr):
+	#	print("Balanced")
+	#else:
+		#print("Not Balanced")
