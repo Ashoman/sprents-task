@@ -1,0 +1,5 @@
+Docker Task 3
+Problem 1:
+Create 2 bridge network, "network1" with subnet 192.168.0.0/24 & "network2" with subnet 10.5.0.0/24 and Run 2 containers "container1 , container2" and attach them to network1. & Run container "container3" and attach it to network2:
+ 1- create 2 bridge
+ 
